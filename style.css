@@ -126,12 +126,28 @@ body {
 }
 
 .weather {
-    display: none;
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.weather.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .error {
-    text-align: center;
-    font-size: 14px;
-    margin-top: 10px;
-    display: none;
+  display: none;
+  color: #ff4d4f;
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.error.show {
+  display: block;
+  opacity: 1;
 }

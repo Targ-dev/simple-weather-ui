@@ -86,15 +86,18 @@
                 else if (data.weather[0].main == "Snow") {
                     weatherIcon.src = "images/snow.png";
                 }
-                document.querySelector(".error").style.display = "none";
-                document.querySelector(".weather").style.display = "block";
-
+                document.querySelector(".error").classList.remove("show");
+                document.querySelector(".weather").classList.add("show");
             }
         }
 
         searchBtn.addEventListener("click", () => {
             checkWeather(searchBox.value);
         })
+
+        window.addEventListener("load", () => {
+            checkWeather("Alappuzha");
+        });
     </script>
 </body>
 
